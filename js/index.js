@@ -295,13 +295,20 @@ function reveal() {
         h = 155;
     }
 
-    var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", "https://www.youtube.com/embed/pHLGOasoS50?autoplay=1");
-    ifrm.style.width = `${w}px`;
-    ifrm.style.height = `${h}px`;
-    ifrm.style.border = 'none';
+    // var ifrm = document.createElement("iframe");
+    // ifrm.setAttribute("src", "https://www.youtube.com/embed/pHLGOasoS50?autoplay=1");
+    // ifrm.style.width = `${w}px`;
+    // ifrm.style.height = `${h}px`;
+    // ifrm.style.border = 'none';
+    var vi = document.createElement("video");
+    vi.src = "/video/cmsn.mp4";
+    vi.style.width = `${w}px`;
+    vi.style.height = `${h}px`;
+    vi.autoplay = true;
+    vi.load();
 
-    document.querySelector('#video').appendChild(ifrm);
+
+    document.querySelector('#video').appendChild(vi);
 }
 // } <
 // iframe width = "560"
